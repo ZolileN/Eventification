@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="creators.co.eventification" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name=".ui.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.GetActiveUsersService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".services.PostAttendanceService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".services.PostReachabilityService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".net.HttpGetPostDataService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <receiver
+            android:name=".listeners.BootUpReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".listeners.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="co.creators.eventification.check_active_users" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.MatchFromContactsService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".services.GeoCodingService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".services.PostEventUserService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+    </application>
+
+</manifest>

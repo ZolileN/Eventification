@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Eventification</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="nearby_friends_notification_title">Catch Up</string>
+    <string name="nearby_friends_notification_text">is also attending this event. He would be here until 12AM. </string>
+    <string name="name_popup">Enter your full name to start</string>
+</resources>

@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "818414116942",
+    "project_id": "default-demo-app-208eb"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818414116942:android:34712f9e00f8701a",
+        "android_client_info": {
+          "package_name": "creators.co.eventification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3HaC5i5dpiHxqDy8SdPahvtqTWc8AC6s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
